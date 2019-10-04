@@ -1,5 +1,6 @@
 body {
-    background-image: url("assets/star-destroyer.jpg");
+    background-image: url("assets/star-destroyer-2560.jpg");
+    background-size: cover;
     text-align: center;
 }
 

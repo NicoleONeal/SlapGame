@@ -52,7 +52,17 @@ function attack(damage) {
     }
 
     health = health - damage;
-    healthElem.innerText = `${health}`;
+    healthElem.innerHTML = `<p style='color:green'>${health}</p>`;
+
+    if (health <= 190) {
+        healthElem.innerHTML = `<p style='color:green'>${health}</p>`;
+    }
+    if (health <= 100) {
+        healthElem.innerHTML = `<p style='color:yellow'>${health}</p>`;
+    }
+    if (health <= 50) {
+        healthElem.innerHTML = `<p style='color:red'>${health}</p>`;
+    }
     activeItems = [];
 }
 
@@ -62,6 +72,6 @@ function attack(damage) {
 // }
 
 function addActiveItem(name) {
-    console.log("adding item", items[name])
+    // console.log("adding item", items[name])
     activeItems.push(items[name]);
 }

@@ -39,16 +39,25 @@ function attack(damage) {
     }
 
     health = health - damage;
-    healthElem.innerHTML = `<p style='color:green'>${health}</p>`;
+    healthElem.innerHTML = `<span style='color:green'>${health}</span>`;
 
     if (health <= 190) {
-        healthElem.innerHTML = `<p style='color:green'>${health}</p>`;
+        healthElem.innerHTML = `<span style='color:green'>${health}</span>`;
     }
     if (health <= 100) {
-        healthElem.innerHTML = `<p style='color:yellow'>${health}</p>`;
+        healthElem.innerHTML = `<span style='color:yellow'>${health}</span>`;
     }
     if (health <= 50) {
-        healthElem.innerHTML = `<p style='color:red'>${health}</p>`;
+        healthElem.innerHTML = `<span style='color:red'>${health}</span>`;
+    }
+    if (health <= 0) {
+        health = 0;
+        healthElem.innerHTML = `<span style='color:red'>${health}</span>`;
+        setTimeout(function () {
+            alert("You have defeated the Dark Side!");
+        }, 250);
+
+
     }
     activeItems = [];
 }

@@ -2,6 +2,7 @@ let health = 200;
 let healthElem = document.getElementById("health");
 healthElem.innerText = `${health}`;
 
+
 let items = {
     falcon: {
         name: 'falcon',
@@ -29,21 +30,7 @@ let items = {
 
 let activeItems = [];
 
-/*function lightsaber() {
-    attack(1);
-}
-
-function xwing() {
-    attack(5);
-}
-
-function useTheForce() {
-    attack(10);
-}
-*/
-
 function attack(damage) {
-    //console.log(`Performing attack with modifer: ${activeItem.name}`);
 
     for (let i = 0; i < activeItems.length; i++) {
         damage += activeItems[i].modifier;
@@ -72,6 +59,6 @@ function attack(damage) {
 // }
 
 function addActiveItem(name) {
-    // console.log("adding item", items[name])
+
     activeItems.push(items[name]);
 }

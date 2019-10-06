@@ -1,23 +1,25 @@
 let health = 200;
 let healthElem = document.getElementById("health");
 healthElem.innerText = `${health}`;
+$('#gameRules').modal('show')
+
 
 
 let items = {
     falcon: {
         name: 'falcon',
-        modifier: 2,
-        description: 'FALCON PUNCH!'
+        modifier: 5,
+        description: 'Don/t get cocky kid!'
     },
     ewok: {
         name: 'ewok',
-        modifier: 5,
-        description: 'IT A FUZZY MIDGET!'
+        modifier: 3,
+        description: 'Ewoks snuck on board!'
     },
     hyperDrive: {
         name: 'hyperDrive',
-        modifier: 3,
-        description: 'TOO FAST BRAH'
+        modifier: 2,
+        description: 'Evasie mannuvers!'
     },
     default: {
         name: 'default',
